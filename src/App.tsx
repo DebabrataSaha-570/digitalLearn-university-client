@@ -1,8 +1,8 @@
+import MainLayout from "./components/layout/MainLayout";
 function App() {
   return (
     <>
-      {" "}
-      <h1>Welcome to digital Learn university</h1>
+      <MainLayout></MainLayout>
     </>
   );
 }

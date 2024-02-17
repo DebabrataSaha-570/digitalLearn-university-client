@@ -1,7 +1,7 @@
-import { Layout, Menu, MenuProps } from "antd";
-import { NavLink, Outlet } from "react-router-dom";
-import { adminSidebarItems } from "../../routes/admin.routes";
-const { Header, Content, Footer, Sider } = Layout;
+import { Layout } from "antd";
+import { Outlet } from "react-router-dom";
+import SideBar from "./SideBar";
+const { Header, Content, Footer } = Layout;
 
 // const items: MenuProps["items"] = [
 //   {
@@ -31,35 +31,7 @@ const { Header, Content, Footer, Sider } = Layout;
 const MainLayout = () => {
   return (
     <Layout style={{ height: "100vh" }}>
-      <Sider
-        breakpoint="lg"
-        collapsedWidth="0"
-        onBreakpoint={(broken) => {
-          console.log(broken);
-        }}
-        onCollapse={(collapsed, type) => {
-          console.log(collapsed, type);
-        }}
-      >
-        <div
-          style={{
-            color: "white",
-            textAlign: "center",
-            height: "4rem",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <h2>digitalLearn</h2>
-        </div>
-        <Menu
-          theme="dark"
-          mode="inline"
-          defaultSelectedKeys={["4"]}
-          items={adminSidebarItems}
-        />
-      </Sider>
+      <SideBar></SideBar>
       <Layout>
         <Header style={{ padding: 0 }} />
         <Content style={{ margin: "24px 16px 0" }}>
